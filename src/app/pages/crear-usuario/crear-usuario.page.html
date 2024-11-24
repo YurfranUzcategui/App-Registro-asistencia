@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Nueva Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input class="container" [(ngModel)]="mdl_correo" label="Correo Electronico"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="container" [(ngModel)]="mdl_contrasena" type="password" label="Contraseña"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="container" [(ngModel)]="mdl_nombre" label="Nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="container" [(ngModel)]="mdl_apellido" label="Apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="container" [(ngModel)]="mdl_carrera" label="Carrera"></ion-input>
+  </ion-item>
+
+  <ion-button class="boton" expand="block" (click)="almacenarUsuario()">Crear Cuenta</ion-button>
+
+  <ion-toast
+  [isOpen]="isToastOpen"
+  [message]="mensaje"
+  [duration]="2000"
+  (didDismiss)="setOpen(false)">
+  </ion-toast>
+
+</ion-content>

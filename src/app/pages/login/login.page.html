@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input [(ngModel)]="mdl_correo" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input [(ngModel)]="mdl_contrasena" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button class="boton" expand="block" (click)="iniciarSesion()">Iniciar Sesión</ion-button>
+  <ion-button class="boton" expand="block" (click)="navegarCrearUsuario()">Crear Cuenta</ion-button>
+
+  
+  <ion-toast
+  [isOpen]="isToastOpen"
+  [message]="mensaje"
+  [duration]="2000"
+  (didDismiss)="setOpen(false)">
+  </ion-toast>
+
+</ion-content>

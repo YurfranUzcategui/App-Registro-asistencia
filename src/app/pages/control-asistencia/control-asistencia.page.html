@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Asignaturas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let asignatura of lista_asignaturas" [color]="asignatura.color">
+    <ion-card-header>
+        <ion-card-title class="titulo-centrado">{{ asignatura.nombre }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <p>Sigla del curso: <strong>{{ asignatura.sigla }}</strong></p>
+        <p>Clases presentes: <strong>{{ asignatura.presente }}</strong></p>
+        <p>Clases ausentes: <strong>{{ asignatura.ausente }}</strong></p>
+        <p>Porcentaje de asistencia: <strong>{{ asignatura.porcentajeAsistencia }}%</strong></p>
+        <p>Status: <strong>{{ asignatura.status }}</strong></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
